@@ -40,12 +40,6 @@ main p{
     margin-left: 10px;
     margin-right: 10px;
 }
-main div aside {
-    margin-left:15%;
-    text-decoration: underline;
-
-    font-style: italic;
-}
 
 .navbar{
     display: flex;
@@ -111,27 +105,47 @@ main div aside {
     writing-mode:sideways-lr;
 }
 
+.bannerright aside {
+    margin-left:15%;
+    text-decoration: underline;
+    font-style: italic;
+}
+
 #Histoire{
     background-image: url(src/images/histoire_background.png);
     background-size: cover;
     padding-bottom: 4%;
     padding-top: 4%;
-}
-#Evolution{
-    background-image: url(src/images/evolution_background.png);
-    background-size: cover;
-    padding-bottom: 4%;
-    padding-top: 4%;
+    padding-left:4%;
+    margin-left:3%
 }
 #Technologie{
     background-image: url(src/images/technologie_background.png);
     background-size: cover;
     padding-bottom: 4%;
     padding-top: 4%;
+    padding-left:4%;
+    margin-left:3%
 }
+
+
+.bannerleft{
+    padding-bottom: 4%;
+    padding-top: 4%;
+    padding-right:4%;
+    padding-left: 70%;
+}
+.bannerleft aside {
+    padding-left: 55%;
+    text-decoration: underline;
+    font-style: italic;
+}
+#Evolution{
+    background-image: url(src/images/evolution_background.png);
+    background-size: cover;
+}
+
 #Galerie{
     background-image: url(src/images/galerie_background.png);
     background-size: cover;
-    padding-bottom: 4%;
-    padding-top: 4%;
 }
