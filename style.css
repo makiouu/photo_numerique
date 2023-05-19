@@ -4,58 +4,134 @@
 }
 
 *{
-    font-family:Sora;
-    padding:0;
-    margin:0;
-}
+    font-family: Sora;
+    color:rgb(255, 255, 255);
+    font-size: 17px;
+    text-decoration: none;
+    text-align: justify;
 
+    margin: 0;
+    overflow-x: hidden;
+}
+html{
+    scroll-behavior: smooth;
+}
 body{
-    color:rgb(43, 43, 39);
-    background-color:rgb(245, 245, 238);
+    background-color:rgb(13, 6, 6);
+}
+header{
+    background-size: cover;
+    width: 100vw;
+    height: 83vh;
+    background-image: url(src/images/homepage_background.png);
+}
+main h1{
+    font-size: 40px;
+    text-align: center;
+    padding:10px;
+    margin:20px;
+}
+main h2{
+    font-size: 30px;
+    margin: 10px;
+    text-decoration: underline;
+}
+main p{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+main div aside {
+    margin-left:15%;
+    text-decoration: underline;
+
+    font-style: italic;
 }
 
-table{
-    border-collapse:collapse;
-}
-p{
-    font-size:120%;
-    font-weight:400;
-    text-align: left;
-}
+.navbar{
+    display: flex;
+    position: absolute;
+    width: 100%;
+    box-sizing: border-box;
+    justify-content: space-between;
 
-a:hover {
-    color: rgb(132, 132, 132);
-    background-color: brown;
+    align-items: center;
+    padding: .7% 2%;
+    background-color: rgba(13, 6, 6,.5);
 }
-
-#mainTitle{
-    font-size:250%;
-    font-weight:600;
-    text-align:center;
-
-    padding:1%;
-    margin:0px 0px 5px
+.navbar .navpath ol{
+    display: flex;
+    padding: 0px ;
+    align-items: center;
+    list-style-type: none;
 }
-
-.menuDiv{
-    width:auto;
-    border-style:hidden;
-    margin:0.2% auto;
+.navbar .navpath li{
+    list-style-type:">";
+    padding:5px ;
 }
-
-.borders{
-    border: 1px solid grey;
-}
-
-.aButton{
-    text-decoration:none;
-    color:rgb(43, 43, 39);
-    
-    font-size:100%;
+.navbar .navpath .subpath{
+    display: flex;
+    font-size: 16px;
     font-weight:500;
-    padding:0px 20px;
+    padding:5px;
+}
+.navbar .navpath .logo{
+    font-size: 40px;
+    font-weight:600;
+}
+.navbar .navmenu{
+    display: flex;
+    align-items: center;
+}
+.navbar .navmenu ul{
+    display: flex;
+    padding: 10px;
+    list-style-type: none;
+}
+.navbar .navmenu li{
+    padding: 10px;
 }
 
-.body{
-    width:auto;
+#verticalarrow{
+    font-size: 60px;
+    padding:15px;
+    writing-mode: vertical-rl;
+}
+
+#topbutton{
+    position:fixed;
+    width:50px;
+    height:50px;
+    bottom:50px;
+    right:50px;
+    line-height:50px;
+    color: black;
+    background-color:grey;
+    border-radius: 40%;
+    text-align: center;
+    writing-mode:sideways-lr;
+}
+
+#Histoire{
+    background-image: url(src/images/histoire_background.png);
+    background-size: cover;
+    padding-bottom: 4%;
+    padding-top: 4%;
+}
+#Evolution{
+    background-image: url(src/images/evolution_background.png);
+    background-size: cover;
+    padding-bottom: 4%;
+    padding-top: 4%;
+}
+#Technologie{
+    background-image: url(src/images/technologie_background.png);
+    background-size: cover;
+    padding-bottom: 4%;
+    padding-top: 4%;
+}
+#Galerie{
+    background-image: url(src/images/galerie_background.png);
+    background-size: cover;
+    padding-bottom: 4%;
+    padding-top: 4%;
 }
