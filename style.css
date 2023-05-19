@@ -17,14 +17,9 @@ html{
     scroll-behavior: smooth;
 }
 body{
-    background-color:rgb(13, 6, 6);
+    background-color:rgb(24, 15, 15);
 }
-header{
-    background-size: cover;
-    width: 100vw;
-    height: 83vh;
-    background-image: url(src/images/homepage_background.png);
-}
+
 main h1{
     font-size: 40px;
     text-align: center;
@@ -43,14 +38,14 @@ main p{
 
 .navbar{
     display: flex;
-    position: absolute;
+    position: fixed;
     width: 100%;
     box-sizing: border-box;
     justify-content: space-between;
 
     align-items: center;
     padding: .7% 2%;
-    background-color: rgba(13, 6, 6,.5);
+    background-color: rgb(13, 6, 6);
 }
 .navbar .navpath ol{
     display: flex;
@@ -85,6 +80,19 @@ main p{
     padding: 10px;
 }
 
+.welcome_bg{
+    background-size: cover;
+    width: 100vw;
+    height: 83vh;
+    background-image: url(src/images/homepage_background.png);
+}
+.histoire_bg{
+    background-size: cover;
+    width: 100vw;
+    height: 83vh;
+    background-image: url(src/images/homepage_background.png);
+}
+
 #verticalarrow{
     font-size: 60px;
     padding:15px;
@@ -110,7 +118,6 @@ main p{
     text-decoration: underline;
     font-style: italic;
 }
-
 #Histoire{
     background-image: url(src/images/histoire_background.png);
     background-size: cover;
@@ -128,7 +135,6 @@ main p{
     margin-left:3%
 }
 
-
 .bannerleft{
     padding-bottom: 4%;
     padding-top: 4%;
@@ -144,7 +150,6 @@ main p{
     background-image: url(src/images/evolution_background.png);
     background-size: cover;
 }
-
 #Galerie{
     background-image: url(src/images/galerie_background.png);
     background-size: cover;
