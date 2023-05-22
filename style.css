@@ -9,11 +9,9 @@
     font-size: 17px;
     text-decoration: none;
     text-align: justify;
+    overflow-x:auto;
 
     margin: 0;
-    overflow-x: hidden;
-}
-html{
     scroll-behavior: smooth;
 }
 body{
@@ -79,24 +77,24 @@ main p{
 .navbar .navmenu li{
     padding: 10px;
 }
+.navbar .navmenu a:hover{
+    text-decoration: underline;
+}
 
 .welcome_bg{
     background-size: cover;
-    width: 100vw;
+    width: 100%;
     height: 83vh;
     background-image: url(src/images/homepage_background.png);
 }
 .histoire_bg{
     background-size: cover;
-    width: 100vw;
+    width: 100%;
     height: 83vh;
     background-image: url(src/images/homepage_background.png);
 }
-
-#verticalarrow{
-    font-size: 60px;
-    padding:15px;
-    writing-mode: vertical-rl;
+#head a{
+    text-decoration: underline;
 }
 
 #topbutton{
@@ -113,9 +111,17 @@ main p{
     writing-mode:sideways-lr;
 }
 
+.textBlock{
+    width:25vw;
+    background-color: rgba(0,0,0,.3);
+}
+.descriptif{
+    margin-bottom:7px;
+}
 .bannerright aside {
-    margin-left:15%;
-    text-decoration: underline;
+    text-align: end;
+    margin-right:5px;
+    margin-bottom:5px;
     font-style: italic;
 }
 #Histoire{
@@ -143,7 +149,6 @@ main p{
 }
 .bannerleft aside {
     padding-left: 55%;
-    text-decoration: underline;
     font-style: italic;
 }
 #Evolution{
@@ -153,4 +158,29 @@ main p{
 #Galerie{
     background-image: url(src/images/galerie_background.png);
     background-size: cover;
+}
+
+#content a:hover{
+    text-decoration:underline;
+}
+
+.timeline{
+    border:1px solid red;
+    display:flex;
+    align-items:center;
+}
+.box{
+    width:20rem;
+    padding:2px;
+    margin:10px;
+    border:1px solid blue;
+    background-color: rgba(0,0,0,.3);
+}
+.boxtitle{
+    text-align:center;
+    text-decoration: underline;
+}
+.boxtext{
+    width:80%;
+    padding: 5px;
 }
