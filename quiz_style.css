@@ -1,0 +1,49 @@
+@font-face {
+    font-family: Sora;
+    src: url(src/fonts/Sora.ttf);
+}
+/* Le selecteur *  cible tous les éléments */
+* {  
+	font-family: Sora;
+	font-size: 1em; 
+}
+
+/* Un selecteur commencant par un point cible une classe*/
+.contener{
+	width:1000px;	
+	margin:auto;	
+}
+
+.question li{
+	list-style-type:none;	
+}
+
+/* Un selecteur suivi de [attribut=valeur] ne sible que les éléments qui ont un attribut egal a la valeur*/
+.question input[type=radio]{
+	margin-right:10px;
+}
+img{
+	border-radius: 15px;
+}
+
+fieldset{
+	width: 100%;
+	padding:10px 20px 20px 20px;
+	margin-bottom:20px;
+	border:1px solid #514949;
+	border-radius: 10px;
+}
+
+legend{font-weight:bold;}
+
+.inscription{
+	background-image:linear-gradient(black, #645050);
+}
+ 
+button{border:1px solid #645050;border-radius: 10px;padding:10px 20px 10px 20px;} 
+/* Un selecteur suivi de :hover cible l'element uniquement quand la souris passe dessu*/
+button:hover{background-image:linear-gradient(black, #645050);font-weight:bold}
+
+.right{float:right;}
+.right50{float:right;width:50%;}
+.left50{float:left;width:50%;}

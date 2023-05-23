@@ -8,7 +8,9 @@
 
     <title>La Photo numérique - Prise d'une photographie</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="quiz_style.css">
     <link rel="icon" href="src/images/icon.png">
+    <script src="quiz.js"></script>
 </head>
 <body>
     <header>
@@ -35,15 +37,409 @@
         <a id="topbutton" href="#">&#9650;</a>
         <section id="head">
             <h1>placeholder</h1>
-            <a href="#content"><h1>Quiz</h1></a>
+            <h1>Quiz</h1>
         </section>
-        <section id="content">
-
+        <section>
+            <div class="contener">
+                <form id="formulaire" method="POST" action="valider.php">
+                            <fieldset class="inscription"><legend>Inscription</legend>
+                                <table>
+                                    <tr>
+                                        <td><label for="nom" >Nom</label></td>
+                                        <td><input id="nom" name="nom" type="text" class="required"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td><label for="prenom" >Prenom</label></td>
+                                        <td><input id="prenom" name="prenom" type="text" class="required"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td><label for="classe" class="required">Classe</label></td>
+                                                                    <td>
+                                            <select id="niveau" name="classe" class="required">
+                                                <option value="" selected="selected">Choisir votre classe</option>
+                                                <option value="1G4">1G4</option>
+                                                <option value="PROF">PROF</option>
+                                            </select>
+            
+                                        
+                                    </tr>						
+                                    <tr>
+                                        <td><label for="niveau" class="required">Niveau</label></td>
+                                        <td>
+                                            <select id="niveau" name="niveau" class="required">
+                                                <option value="" selected="selected">Choisir un niveau</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                        
+                                            </select>
+                                        </td>
+                                    </tr>				
+                                </table>
+                            </fieldset>
+                            <fieldset>
+                                <legend>Thème du QCM</legend>
+                                <div>20 Questions : La photographie numérique</div>
+                            </fieldset>
+            
+            
+            
+                                            <fieldset>
+            
+                                <legend>Question 1</legend>
+                                <div class="question">
+                                    <p id="question1">A qui doit-on le principe de la photographie ? : </p>
+                                    <ul>
+                                        <li><label><input type="radio" name="Q1" value="A">A.Louis et Auguste Lumière</label></li>
+                                        <li><label><input type="radio" name="Q1" value="B">B.Marc et Ivan Kodak</label></li>
+                                        <li><label><input type="radio" name="Q1" value="C">C.Joseph Nièpce et Louis Daguerre</label></li>	<!--Bonne réponse !-->			
+                                        <li><label><input type="radio" name="Q1" value="D">D.Mathys Prud'homme Albert et Tudalig Zheng</label></li>
+                                    </ul>
+                                </div>
+                            </fieldset>
+                                            <fieldset>
+            
+                                <legend>Question 2</legend>
+                                <div class="question">		
+                                    <p id="question2">Quand a été créé le premier appareil photo numérique ? :</p>
+                                    <ul>
+                                        <li><label><input type="radio" name="Q2" value="A">A.1995</label></li>
+                                        <li><label><input type="radio" name="Q2" value="B">B.1869</label></li>
+                                        <li><label><input type="radio" name="Q2" value="C">C.1975</label></li>	<!--Bonne réponse !-->			
+                                        <li><label><input type="radio" name="Q2" value="D">D.1968</label></li>
+                                    </ul>
+                                </div>
+                            </fieldset>
+                                            <fieldset>
+            
+                                <legend>Question 3</legend>
+                                <div class="question">		
+                                    <p id="question3">Comment les couleurs sont elles perçues par un photosite ? :</p>
+                                    <!-- Utilisation de la balise pre (preformater) qui permet d'afficher le texte sans interpretation de l'html 
+                                                                 et donc avec tabulation et saut de ligne -->
+                                    
+                                        
+                                        <div class="right50">
+                                            <ul>
+                                                <li><label><input type="radio" name="Q3" value="A">A.Il dispose d'un filtre coloré</label></li> <!--Bonne réponse !-->
+                                                <li><label><input type="radio" name="Q3" value="B">B.Il envoie des rayons vers la scène</label></li>
+                                                <li><label><input type="radio" name="Q3" value="C">C.Il a des yeux</label></li>				
+                                                <li><label><input type="radio" name="Q3" value="D">D.Il devine la couleur</label></li>
+                                            </ul>
+                                        </div>
+                                    
+                                </div>
+                            </fieldset>
+                                            <fieldset>
+                                 <legend>Question 4</legend>
+                                <div class="question">		
+                                    <p id="question4">Lequel est un format d'image valable ? :</p>
+                                    
+                                        
+                                <div class="right50">
+                                    <ul>
+                                        <li><label><input type="radio" name="Q4" value="A">A.PNG</label></li> <!--Bonne réponse !-->
+                                        <li><label><input type="radio" name="Q4" value="B">B.DOCX</label></li> 
+                                        <li><label><input type="radio" name="Q4" value="C">C.HTML</label></li>				
+                                        <li><label><input type="radio" name="Q4" value="D">D.PDF</label></li>
+                                    </ul>
+                                </div>
+                                    
+                                </div>
+                            </fieldset>
+                                            <fieldset>
+                                <legend>Question 5</legend>
+                                <div class="question">		
+                                    <p id="question5">Lequel de ces procédés n'est pas une étape du post-traitement automatique d'une image numérique ?</p>
+                                    
+                                        
+                                        <div class="right50">
+                                    <ul>
+                                        <li><label><input type="radio" name="Q5" value="A">A.Le floutage</label></li> <!--Bonne réponse !-->
+                                        <li><label><input type="radio" name="Q5" value="B">B.La saturation des couleurs</label></li>
+                                        <li><label><input type="radio" name="Q5" value="C">C.La balance des blancs</label></li>				
+                                        <li><label><input type="radio" name="Q5" value="D">D.Les corrections géométriques</label></li>
+                                    </ul>
+                                                                    </div>
+                                </div>
+                            </fieldset>
+                                            <fieldset>
+                                <legend>Question 6</legend>
+                                <div class="question">		
+                                    <p id="question6">Quel est l'avantage principal de la photographie numérique par rapport à la photographie argentique ? :</p>
+                                    
+                                        <div class="right50">
+                                    <ul>
+                                        <li><label><input type="radio" name="Q6" value="A">A.La facilité de retouche et de traitement des images</label></li> <!--Bonne réponse !-->
+                                        <li><label><input type="radio" name="Q6" value="B">B.La durabilité des supports d'enregistrement</label></li>
+                                        <li><label><input type="radio" name="Q6" value="C">C.La haute résolution</label></li>				
+                                        <li><label><input type="radio" name="Q6" value="D">D.Les métadonnées</label></li>
+                                                    </ul>
+                                                                     </div>
+            
+                                </div>
+                            </fieldset>
+                                            <fieldset>
+                                <legend>Question 7</legend>
+                                <div class="question">		
+                                    <p id="question7">Qu'est-ce qu'un capteur d'image numérique ?</p>
+                                                                
+                                        <div class="right50">
+                                    <ul>
+                                        <li><label><input type="radio" name="Q7" value="A">A.Un dispositif qui convertit la lumière en signaux électriques pour enregistrer une image.</label></li><!--Bonne réponse !-->
+                                        <li><label><input type="radio" name="Q7" value="B">B.Un dispositif qui convertit la lumière en signaux radio pour enregistrer une image.</label></li>
+                                        <li><label><input type="radio" name="Q7" value="C">C.Un dispositif qui convertit la lumière en signaux optiques pour enregistrer une image.</label></li>				
+                                        <li><label><input type="radio" name="Q7" value="D">D.Un dispositif qui absorbe la lumière d'une scène pour la marquer sur une pellicule</label></li>
+                                    </ul>
+                                                                    </div>
+            
+                                </div>
+                             </fieldset>
+            
+                                              <fieldset>
+                                <legend>Question 8</legend>
+                                <div class="question">		
+                                    <p id="question8">Qu'est-ce que la sensibilité ISO en photographie numérique ? :</p>
+                                    
+                                        
+                                        <div class="right50">
+                                    <ul>
+                                        <li><label><input type="radio" name="Q8" value="A">A.Le réglage qui contrôle la durée d'exposition de l'image.</label></li>
+                                        <li><label><input type="radio" name="Q8" value="B">B.Le réglage qui contrôle la sensibilité du capteur à la lumière.</label></li> <!--Bonne réponse !-->
+                                        <li><label><input type="radio" name="Q8" value="C">C.Le réglage qui contrôle le contraste de l'image.</label></li>				
+                                        <li><label><input type="radio" name="Q8" value="D">D.Le réglage qui contrôle la taille de l'image</label></li>
+                                    </ul>
+                                                                    </div>
+                                </div>
+                             </fieldset>
+                            <fieldset>
+                                <legend>Programme Python :</legend>
+                                    <img src="DsProgramme.png"  alt="programme image" width="900" height="auto">
+                            </fieldset>
+                                            <fieldset>
+                                <legend>Question 9</legend>
+                                <div class="question">		
+                                    <p id="question9">Qu'est-ce que le format RAW en photographie numérique ?</p>
+                                    
+                                        
+                                        <div class="right50">
+                                    <ul>
+                                        <li><label><input type="radio" name="Q9" value="A">A.Un format de fichier compressé qui réduit la taille des images.</label></li>
+                                        <li><label><input type="radio" name="Q9" value="B">B.Un format de fichier non compressé qui préserve toutes les informations capturées par le capteur.</label></li> <!--Bonne réponse !-->
+                                        <li><label><input type="radio" name="Q9" value="C">C.Un format de fichier exclusivement utilisé pour les images en noir et blanc.</label></li>				
+                                        <li><label><input type="radio" name="Q9" value="D">D.Un format de fichier réservé uniquement aux journalistes professionnels</label></li>
+                                    </ul>
+                                                                    </div>
+                                </div>
+                             </fieldset>
+            
+                                             <fieldset>
+                                <legend>Question 10</legend>
+                                <div class="question">		
+                                    <p id="question10">Qu'est-ce que l'histogramme en photographie numérique ? :</p>
+                                    <ul>
+                                        <li><label><input type="radio" name="Q10" value="A">A.Un outil de retouche d'image.</label></li>
+                                        <li><label><input type="radio" name="Q10" value="B">B.Un réglage de la balance des blancs.</label></li>
+                                        <li><label><input type="radio" name="Q10" value="C">C.Une représentation graphique de la répartition des niveaux de luminosité dans une image.</label></li>	<!--Bonne réponse !-->			
+                                        <li><label><input type="radio" name="Q10" value="D">D.Une technique de composition photographique.</label></li>
+                                    </ul>
+                                </div>
+                            </fieldset>
+            
+            
+            
+                                             <fieldset>
+                                 <legend>Question 11</legend>
+                                <div class="question">		
+                                    <p id="question11">Qu'est-ce que la correction d'exposition en photographie numérique ? :</p>
+                                    <!-- Utilisation de la balise pre (preformater) qui permet d'afficher le texte sans interpretation de l'html 
+                                                                 et donc avec tabulation et saut de ligne -->
+                                    <div>
+                                        
+                                        <div class="right50">
+                                            <ul>
+                                                <li><label><input type="radio" name="Q11" value="A">A.Un réglage pour ajuster la netteté de l'image.</label></li>
+                                                <li><label><input type="radio" name="Q11" value="B">B.Un réglage pour compenser la luminosité de la scène.</label></li> <!--Bonne réponse !-->
+                                                <li><label><input type="radio" name="Q11" value="C">C.Un réglage pour régler la mise au point de l'image.</label></li>				
+                                                <li><label><input type="radio" name="Q11" value="D">D.Un réglage pour augmenter ou diminuer la saturation des couleurs.</label></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                                            <fieldset>
+                                 <legend>Question 12</legend>
+                                <div class="question">		
+                                    <p id="question12">Quelle année a marqué l'invention du premier appareil photo numérique grand public ? :</p>
+                                    <!-- Utilisation de la balise pre (preformater) qui permet d'afficher le texte sans interpretation de l'html 
+                                                                 et donc avec tabulation et saut de ligne -->
+                                    <div>
+                                        
+                                        <div class="right50">
+                                            <ul>
+                                                <li><label><input type="radio" name="Q12" value="A">A.1972</label></li>
+                                                <li><label><input type="radio" name="Q12" value="B">B.1984</label></li>
+                                                <li><label><input type="radio" name="Q12" value="C">C.1990</label></li>	<!--Bonne réponse !-->			
+                                                <li><label><input type="radio" name="Q12" value="D">D.2000</label></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                                            <fieldset>
+                                <legend>Question 13</legend>
+                                <div class="question">		
+                                    <p id="question13">Quelle est la définition d'une image :</p>
+                                    <!-- Utilisation de la balise pre (preformater) qui permet d'afficher le texte sans interpretation de l'html 
+                                                                 et donc avec tabulation et saut de ligne -->
+                                    <div>
+                                        
+                                        <div class="right50">
+                                            <ul>
+                                                <li><label><input type="radio" name="Q13" value="A">A.Sa longueur par sa hauteur</label></li> <!--Bonne réponse !-->
+                                                <li><label><input type="radio" name="Q13" value="B">B.Sa hauteur par sa longueur</label></li>
+                                                <li><label><input type="radio" name="Q13" value="C">C.Ses dimensions en cm </label></li>				
+                                                <li><label><input type="radio" name="Q13" value="D">D.Sa qualité des couleurs</label></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+            
+                                            <fieldset>
+                                <legend>Question 14</legend>
+                                <div class="question">		
+                                    <p id="question14">Et sa résolution ? : </p>
+                                    <!-- Utilisation de la balise pre (preformater) qui permet d'afficher le texte sans interpretation de l'html 
+                                                                 et donc avec tabulation et saut de ligne -->
+                                    <div>
+                                        
+                                        <div class="right50">
+                                            <ul>
+                                                <li><label><input type="radio" name="Q14" value="A">A.La taille d'une image</label></li>
+                                                <li><label><input type="radio" name="Q14" value="B">B.Le nombre de pixels/pouce</label></li> <!--Bonne réponse !-->
+                                                <li><label><input type="radio" name="Q14" value="C">C.Ses dimensions en pouces</label></li>				
+                                                <li><label><input type="radio" name="Q14" value="D">D.La taille du ficher de l'image</label></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                                             <fieldset>
+                                 <legend>Question 15</legend>
+                                <div class="question">		
+                                    <p id="question15">Quelle entreprise a lancé le premier appareil photo numérique à succès commercial ? : </p>
+                                    <!-- Utilisation de la balise pre (preformater) qui permet d'afficher le texte sans interpretation de l'html 
+                                                                 et donc avec tabulation et saut de ligne -->
+                                    <div>
+                                        
+                                        <div class="right50">
+                                            <ul>
+                                                <li><label><input type="radio" name="Q15" value="A">A. Nikon</label></li>
+                                                <li><label><input type="radio" name="Q15" value="B">B. Kodak</label></li> <!--Bonne réponse !-->
+                                                <li><label><input type="radio" name="Q15" value="C">C. Canon</label></li>				
+                                                <li><label><input type="radio" name="Q15" value="D">D. Sony</label></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                                             <fieldset>
+                                <legend>Question 16</legend>
+                                <div class="question">		
+                                    <p id="question16">Qu'est-ce que la compression JPEG utilisée dans la photographie numérique ? :</p>
+                                    <!-- Utilisation de la balise pre (preformater) qui permet d'afficher le texte sans interpretation de l'html 
+                                                                 et donc avec tabulation et saut de ligne -->
+                                    <div>
+                                    
+                                        <div class="right50">
+                                            <ul>
+                                                <li><label><input type="radio" name="Q16" value="A">A.Une méthode pour réduire la taille des fichiers image sans perte significative de qualité.</label></li> <!--Bonne réponse !-->
+                                                <li><label><input type="radio" name="Q16" value="B">B.Un procédé chimique utilisé dans le développement des photos argentiques.</label></li>
+                                                <li><label><input type="radio" name="Q16" value="C">C.Une technique pour ajuster les couleurs dans une image.</label></li>				
+                                                <li><label><input type="radio" name="Q16" value="D">D.Un format de fichier spécifique utilisé pour stocker des images en noir et blanc.</label></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+            
+                                            <fieldset>
+                                 <legend>Question 17</legend>
+                                <div class="question">		
+                                    <p id="question17">Qu'est-ce que l'ouverture en photographie ? :</p>
+                                    <ul>
+                                        <li><label><input type="radio" name="Q17" value="A">A.La durée pendant laquelle l'obturateur reste ouvert.</label></li>
+                                        <li><label><input type="radio" name="Q17" value="B">B.Le diamètre de l'ouverture du diaphragme de l'objectif.</label></li> <!--Bonne réponse !-->
+                                        <li><label><input type="radio" name="Q17" value="C">C.La sensibilité de la caméra à la lumière.</label></li>				
+                                        <li><label><input type="radio" name="Q17" value="D">D.La distance entre le sujet et l'appareil photo.</label></li>
+                                    </ul>
+                                </div>
+                            </fieldset>
+                                             <fieldset>
+                                 <legend>Question 18</legend>
+                                <div class="question">		
+                                    <p id="question18">Que signifie PNG :</p>
+                                    <ul>
+                                        <li><label><input type="radio" name="Q18" value="A">A.Portrait natif grand</label></li>
+                                        <li><label><input type="radio" name="Q18" value="B">B.Portable Network Graphics </label></li> <!--Bonne réponse !-->
+                                        <li><label><input type="radio" name="Q18" value="C">C.Joint Photographic Expert Group</label></li>				
+                                        <li><label><input type="radio" name="Q18" value="D">D.Graphics Interchange Format </label></li>
+                                    </ul>
+                                </div>
+                            </fieldset>
+            
+                                             <fieldset>
+                                <legend>Question 19</legend>
+                                <div class="question">		
+                                    <p id="question19">Comment les couleurs sont-elles codées :</p>
+                                    <!-- Utilisation de la balise pre (preformater) qui permet d'afficher le texte sans interpretation de l'html 
+                                                                 et donc avec tabulation et saut de ligne -->
+                                    
+                                        <div class="right50">
+                                            <ul>
+                                                <li><label><input type="radio" name="Q19" value="A">A.Avec un code PIN à 6 chiffres</label></li>
+                                                <li><label><input type="radio" name="Q19" value="B">B.Avec leur nom (ex: red, blue...) </label></li>
+                                                <li><label><input type="radio" name="Q19" value="C">C.Avec un code hexadecimal</label></li> <!--Bonne réponse !-->	
+                                                <li><label><input type="radio" name="Q19" value="D">D.Avec un ensemble de trois valeurs</label></li> <!--Bonne réponse !-->
+                                                                                   
+                                            </ul>
+                                        </div>
+                                </div>
+                            </fieldset>
+                                            <fieldset>
+                                                <legend>Question 20</legend>
+                                 <div class="question">		
+                                    <p id="question20">De quel ordre est la taille d'une image prise sur smartphone: </p>
+                                    <!-- Utilisation de la balise pre (preformater) qui permet d'afficher le texte sans interpretation de l'html 
+                                                                 et donc avec tabulation et saut de ligne -->
+                                    <div>
+                                        
+                                        <div class="right50">
+                                            <ul>
+                                                <li><label><input type="radio" name="Q20" value="A">A.En octets</label></li>
+                                                <li><label><input type="radio" name="Q20" value="B">B.En Go</label></li>
+                                                <li><label><input type="radio" name="Q20" value="C">C.En Mo</label></li><!--Bonne réponse !-->			
+                                                <li><label><input type="radio" name="Q20" value="D">D.En Ko </label></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+            
+                            <p class="right">
+                                <button type="button" onclick="valider()">Valider</button>
+                            </p>
+                        </form>			
+                    </div>	
+                </body>
+            </html>
+                                
         </section>
     </main>
 
     <footer>
-
+        <p>Tous droits réservés aux ayants-droits :p</p>
+        <p>Ce site a été créé dans le cadre d'un projet scolaire de NSI.</p>
     </footer>
 </body>
 </html>
